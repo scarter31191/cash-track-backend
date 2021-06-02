@@ -1,6 +1,6 @@
 class Api::V1::TransactionsController < ApplicationController
 
-    beforr_action :set_account
+    before_action :set_account
 
 
     def index
