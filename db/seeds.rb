@@ -10,6 +10,12 @@
     Account.create(name: 'MMA', goal_amount: 500, balance: 250)
     Account.create(name: 'Checking', goal_amount: 1000, balance: 1500)
 
-    Transaction.create(account_id: 1, amount: 100, kind: 'deposit', date: Date.today, description: 'bi-weekly deposit')
-    Transaction.create(account_id: 2, amount: 20, kind: 'deposit', date: Date.today, description: 'bi-weekly deposit')
-    Transaction.create(account_id: 3, amount: 300, kind: 'withdraw', date: Date.today, description: 'random road trip')
+    Transaction.create([
+        {account_id: 1, amount: 100, kind: 'deposit', date: Date.today, description: 'bi-weekly deposit'},
+        {account_id: 2, amount: 20, kind: 'deposit', date: Date.today, description: 'bi-weekly deposit'},
+        {account_id: 3, amount: 300, kind: 'withdraw', date: Date.today, description: 'random road trip'}
+    ])
+
+    # Transaction.create(account_id: 1, amount: 100, kind: 'deposit', date: Date.today, description: 'bi-weekly deposit')
+    # Transaction.create(account_id: 2, amount: 20, kind: 'deposit', date: Date.today, description: 'bi-weekly deposit')
+    # Transaction.create(account_id: 3, amount: 300, kind: 'withdraw', date: Date.today, description: 'random road trip')
