@@ -7,6 +7,7 @@ class Account < ApplicationRecord
             self.balance = self.balance + transaction.amount
             self.save 
         elsif transaction.kind == 'withdraw'
+            # binding.pry
             if self.balance >= transaction.amount
             self.balance = self.balance - transaction.amount
             self.save
